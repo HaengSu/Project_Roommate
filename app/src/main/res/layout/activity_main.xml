@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_find_title"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/im_find_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/image_glass"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/re_find_user"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parenta"
+        app:layout_constraintTop_toBottomOf="@id/im_find_user"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
