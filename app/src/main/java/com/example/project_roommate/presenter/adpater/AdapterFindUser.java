@@ -1,4 +1,4 @@
-package com.example.project_roommate.adapter;
+package com.example.project_roommate.presenter.adpater;
 
 import android.view.View;
 import android.view.ViewGroup;
