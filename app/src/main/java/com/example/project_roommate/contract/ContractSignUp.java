@@ -1,14 +1,16 @@
 package com.example.project_roommate.contract;
 
+import android.content.Context;
+
 public interface ContractSignUp {
     interface View {
-        public void Success();
-        public void Failed();
+        public void success();
+        public void failed();
 
     }
 
     interface Presenter{
-        public void NewSignUp(String email,String password);
-        public void LogInCheck(String email,String password);
+        public void newSignUp(Context context, String name, String email, String password, String age, String location, String sTime, String hPay);
+        public void logInCheck(String email,String password);
     }
 }

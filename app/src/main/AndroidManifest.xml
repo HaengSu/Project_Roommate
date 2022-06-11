@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Project_Roommate"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivityLogin"
+            android:name=".view.ActivityFindUser"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ActivityFindUser"
-            android:exported="true"/>
+<!--        <activity android:name=".view.ActivityFindUser"-->
+<!--            android:exported="true"/>-->
         <activity android:name=".view.ActivitySignUp"
+            android:exported="true"/>
+        <activity android:name=".view.ActivityChatting"
             android:exported="true"/>
     </application>
 

@@ -2,6 +2,9 @@
     <string name="app_name">Project_Roommate</string>
     <string name="activity_find_title">내 주변 룸메 찾기</string>
     <string name="login_kr">로그인</string>
+    <string name="name">Name</string>
+    <string name="location">사는 곳</string>
+    <string name="location_info">시 까지만 입력해주세요 \n ex) 서울시,광주시,강원도,제주도</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login_en">LOGIN</string>

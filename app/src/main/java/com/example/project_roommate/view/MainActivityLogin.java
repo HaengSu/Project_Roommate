@@ -40,9 +40,9 @@ public class MainActivityLogin extends AppCompatActivity implements ContractSign
                 email = binding.edEmail.getText().toString();
                 password = binding.edPassword.getText().toString();
 
-                presenter.LogInCheck(email, password);
+                presenter.logInCheck(email, password);
                 if (!(email.isEmpty() && password.isEmpty())) {
-                    presenter.LogInCheck(email, password);
+                    presenter.logInCheck(email, password);
                 } else {
                     Toast.makeText(
                             MainActivityLogin.this, "모든 정보를 입력해주세요.",
@@ -72,13 +72,13 @@ public class MainActivityLogin extends AppCompatActivity implements ContractSign
     }
 
     @Override
-    public void Success() {
+    public void success() {
         Intent i = new Intent(this, ActivityFindUser.class);
         startActivity(i);
     }
 
     @Override
-    public void Failed() {
+    public void failed() {
         Toast.makeText(this, "입력한 정보가 틀렸습니다.", Toast.LENGTH_SHORT).show();
     }
 }
