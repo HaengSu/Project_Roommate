@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
-
+//
 public class PresenterChatting implements ContractChatting.Presenter {
     private static final String TAG = PresenterChatting.class.getName() + " 로그";
     private ContractChatting.View mView;
