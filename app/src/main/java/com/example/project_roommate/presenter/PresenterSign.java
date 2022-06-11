@@ -31,7 +31,7 @@ public class PresenterSign implements ContractSignUp.Presenter {
     }
 
     @Override
-    public void NewSignUp(String email, String password, String nickName) {
+    public void NewSignUp(String email, String password) {
         activitySignUp = new ActivitySignUp();
         auth = FirebaseAuth.getInstance();
 

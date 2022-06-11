@@ -8,7 +8,7 @@ public interface ContractSignUp {
     }
 
     interface Presenter{
-        public void NewSignUp(String email,String password,String nickName);
+        public void NewSignUp(String email,String password);
         public void LogInCheck(String email,String password);
     }
 }

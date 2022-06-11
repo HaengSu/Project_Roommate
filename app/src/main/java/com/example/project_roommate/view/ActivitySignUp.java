@@ -18,7 +18,6 @@ public class ActivitySignUp extends AppCompatActivity implements ContractSignUp.
     private ContractSignUp.Presenter presenter;
     private String email;
     private String password;
-    private String nickName;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,10 +40,9 @@ public class ActivitySignUp extends AppCompatActivity implements ContractSignUp.
 
                 email = binding.edEmail.getText().toString();
                 password = binding.edPassword.getText().toString();
-                nickName = binding.edNickname.getText().toString();
 
-                if (!(email.isEmpty() && password.isEmpty() && nickName.isEmpty())) {
-                    presenter.NewSignUp(email, password, nickName);
+                if (!(email.isEmpty() && password.isEmpty())) {
+                    presenter.NewSignUp(email, password);
                 } else {
                     Toast.makeText(ActivitySignUp.this,"모든 정보를 입력해주세요." , Toast.LENGTH_SHORT).show();
                 }
@@ -54,8 +52,8 @@ public class ActivitySignUp extends AppCompatActivity implements ContractSignUp.
 
     @Override
     public void Success() {
-        Toast.makeText(this, "환영합니다 " + nickName + "님!", Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(this, ActivityFindUser.class);
+        Toast.makeText(this, "환영합니다 오늘도 즐거운 하루 보내세요!", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this, MainActivityLogin.class);
         startActivity(i);
     }
 

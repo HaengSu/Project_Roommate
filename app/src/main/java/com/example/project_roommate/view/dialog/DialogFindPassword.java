@@ -38,7 +38,7 @@ public class DialogFindPassword extends Dialog implements View.OnClickListener {
     }
 
     public void showDialog() {
-        customDialog.setContentView(R.layout.dialog_find_user_password);
+        customDialog.setContentView(R.layout.dialog_find_password);
         customDialog.setCanceledOnTouchOutside(false);
         customDialog.setCancelable(true);
         customDialog.show();

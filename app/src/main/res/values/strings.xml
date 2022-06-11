@@ -8,7 +8,15 @@
     <string name="find_user_info">이이디/비밀번호 찾기</string>
     <string name="sign_up">회원가입</string>
     <string name="password_notify">6자 이상 입력해주세요.</string>
-    <string name="nick_name">Nick Name</string>
     <string name="find_password">비밀번호 재설정 이메일을 받을 주소를\n입력해주세요</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="user_age">나이</string>
+    <string name="age">세</string>
+    <string name="sleep_time">잠자는시간</string>
+    <string name="hope_pay">희망 월세</string>
+    <string name="million">만원</string>
+    <string name="time">시</string>
+    <string name="time_info">24시로 \n표시해주세요</string>
+
 
 </resources>
