@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Project_Roommate</string>
     <string name="activity_find_title">내 주변 룸메 찾기</string>
+    <string name="login_kr">로그인</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_en">LOGIN</string>
+    <string name="find_user_info">이이디/비밀번호 찾기</string>
+    <string name="sign_up">회원가입</string>
+    <string name="password_notify">6자 이상 입력해주세요.</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="find_password">비밀번호 재설정 이메일을 받을 주소를\n입력해주세요</string>
+
 </resources>

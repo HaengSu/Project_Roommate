@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "192272557031",
+    "firebase_url": "https://roommate-chat-ced39-default-rtdb.firebaseio.com",
+    "project_id": "roommate-chat-ced39",
+    "storage_bucket": "roommate-chat-ced39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192272557031:android:d890cb6b9b92b627ef9342",
+        "android_client_info": {
+          "package_name": "com.example.dsuroommate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192272557031-dusfmjbr273v8a2rsulqcl7fe1ql43gj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dsuroommate",
+            "certificate_hash": "003149717999fc922d8afa1dda11936bd0598bae"
+          }
+        },
+        {
+          "client_id": "192272557031-tlp9ibang47uhcpp8vt3574tprntjqn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAafaEOQl1ffSQveYzJEFqprTyuOOZ1Yrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192272557031-tlp9ibang47uhcpp8vt3574tprntjqn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192272557031:android:f4292357c5c4376aef9342",
+        "android_client_info": {
+          "package_name": "com.example.project_roommate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192272557031-orc9qjkqanmcddcn162lst6dfv0d3jf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_roommate",
+            "certificate_hash": "27576ae31bb3dd75c5edbf30cd77c406062ff787"
+          }
+        },
+        {
+          "client_id": "192272557031-tlp9ibang47uhcpp8vt3574tprntjqn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAafaEOQl1ffSQveYzJEFqprTyuOOZ1Yrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192272557031-tlp9ibang47uhcpp8vt3574tprntjqn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
