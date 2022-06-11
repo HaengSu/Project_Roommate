@@ -33,7 +33,7 @@ public class AdapterFindUser extends RecyclerView.Adapter<FindUserViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull FindUserViewHolder holder, int position) {
         holder.setView(aList,position);
-        holder.itemClick();
+        holder.itemClick(aList.get(position).getName());
     }
 
     @Override
@@ -60,9 +60,10 @@ class FindUserViewHolder extends RecyclerView.ViewHolder {
         mBinding.tvUserInfo.setText("나이 : "+age +"세 \n취침시간 : "+sleepTime+"시 \n희망월세 : "+hPay+"만원");
     }
 
-    public void itemClick() {
+    public void itemClick(String name) {
         mBinding.imChatting.setOnClickListener( v -> {
             Intent i = new Intent(itemView.getContext(), ActivityChatting.class);
+            i.putExtra("otherName", name);
             itemView.getContext().startActivity(i);
         });
     }

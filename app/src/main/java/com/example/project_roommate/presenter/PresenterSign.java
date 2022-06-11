@@ -60,6 +60,7 @@ public class PresenterSign implements ContractSignUp.Presenter {
                 Log.i(TAG, "onSuccess: 데이터 주입 성공");
 
                 ModelSharedPreferences.setUserLocation(context,location);
+                ModelSharedPreferences.setUserName(context,name);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -33,7 +33,6 @@ public class PresenterFindUser implements ContractFindUser.Presenter {
         db = FirebaseFirestore.getInstance();
 
         String userLocation = ModelSharedPreferences.getUserLocation(context);
-//        Log.i(TAG, "findUser: userLocation = "+ userLocation);
         db.collection("userInfo").whereEqualTo("location", userLocation).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
