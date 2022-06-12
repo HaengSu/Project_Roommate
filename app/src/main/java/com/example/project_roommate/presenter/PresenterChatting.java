@@ -81,6 +81,13 @@ public class PresenterChatting implements ContractChatting.Presenter {
             }
         });
     }
+
+    @Override
+    public void deleteChatting(Context context) {
+        DatabaseReference databaseReference = database.getReference("chatting");
+
+        databaseReference.removeValue();
+    }
 }
 
 

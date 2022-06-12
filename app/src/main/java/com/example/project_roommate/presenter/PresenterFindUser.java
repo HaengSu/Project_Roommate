@@ -38,16 +38,20 @@ public class PresenterFindUser implements ContractFindUser.Presenter {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     ArrayList<ModelUserInfo> aList = new ArrayList<>();
+                    String myName = ModelSharedPreferences.getUserName(context);
 
                     for (QueryDocumentSnapshot document : task.getResult()) {
 //                        Log.i(TAG,  "document => "+document.getData().values());
-                        String name = document.getData().get("name").toString();
-                        String age = document.getData().get("age").toString();
-                        String sTime = document.getData().get("sleepTime").toString();
-                        String hopePay = document.getData().get("hopePay").toString();
 
-                        ModelUserInfo mData = new ModelUserInfo(name, age, sTime, hopePay);
-                        aList.add(mData);
+                        if (!document.getData().get("name").toString().equals(myName)){
+                            String name = document.getData().get("name").toString();
+                            String age = document.getData().get("age").toString();
+                            String sTime = document.getData().get("sleepTime").toString();
+                            String hopePay = document.getData().get("hopePay").toString();
+
+                            ModelUserInfo mData = new ModelUserInfo(name, age, sTime, hopePay);
+                            aList.add(mData);
+                        }
                     }
                     Log.i(TAG, "onComplete: size = "+ aList.size());
                     mView.success(aList);

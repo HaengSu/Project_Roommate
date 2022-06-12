@@ -20,6 +20,7 @@
     <string name="million">만원</string>
     <string name="time">시</string>
     <string name="time_info">24시로 \n표시해주세요</string>
+    <string name="exit">나가기</string>
 
 
 </resources>

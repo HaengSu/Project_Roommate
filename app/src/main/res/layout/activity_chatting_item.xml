@@ -73,6 +73,7 @@
             app:layout_constraintTop_toTopOf="@id/im_other" />
 
         <TextView
+            android:id="@+id/tv_other_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

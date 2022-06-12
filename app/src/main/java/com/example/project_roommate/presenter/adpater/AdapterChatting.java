@@ -56,17 +56,20 @@ class ViewHolderChatting extends RecyclerView.ViewHolder {
 
     public void setView(Context context,ArrayList<ModelChatting> cList,int position) {
         String myName = ModelSharedPreferences.getUserName(context);
+        String time = cList.get(position).getTime();
 
         if (cList.get(position).getName().equals(myName)){  //내가 보낸 메시지일 경우
             binding.layoutOtherMessage.setVisibility(View.GONE);
             binding.layoutMyMessage.setVisibility(View.VISIBLE);
 
             binding.tvMyMessage.setText(cList.get(position).getMessage());
+            binding.tvTime.setText(time.substring(8,10)+":"+time.substring(10,12));
         } else {    // 상대방이 보낸 메시지일 경우
             binding.layoutOtherMessage.setVisibility(View.VISIBLE);
             binding.layoutMyMessage.setVisibility(View.GONE);
 
             binding.tvOtherMessage.setText(cList.get(position).getMessage());
+            binding.tvOtherTime.setText(time.substring(8,10)+":"+time.substring(10,12));
         }
     }
 

@@ -14,5 +14,6 @@ public interface ContractChatting {
     interface Presenter{
         void getMessage();
         void setChatting(Context context, String message,String time);
+        void deleteChatting(Context context);
     }
 }

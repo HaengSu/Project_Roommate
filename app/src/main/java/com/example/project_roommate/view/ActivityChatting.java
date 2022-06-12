@@ -53,8 +53,7 @@ public class ActivityChatting extends AppCompatActivity implements ContractChatt
 
         mBinding.tvTitle.setText(otherName + "님과의 채팅");
 
-        mBinding.reChatting.setLayoutManager(new LinearLayoutManager(this));
-        mBinding.reChatting.setAdapter(mAdapter);
+        initRecyclerView();
     }
 
     private void setEvent() {
@@ -64,33 +63,51 @@ public class ActivityChatting extends AppCompatActivity implements ContractChatt
             String myName = ModelSharedPreferences.getUserName(ActivityChatting.this);
             String message = mBinding.edChatting.getText().toString();
             presenter.setChatting(ActivityChatting.this, message, getTime());
+            mBinding.edChatting.setText("");
+        });
 
-            mList.add(new ModelChatting(myName, message, getTime()));
-            mAdapter.notifyItemInserted(mList.size());
+        mBinding.tvExit.setOnClickListener(v -> {
+            finish();
+            presenter.deleteChatting(ActivityChatting.this);
         });
 
         mBinding.edChatting.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                return true;
+//                switch (keyCode){
+//                    case KeyEvent.KEYCODE_ENTER:
+//                        String myName = ModelSharedPreferences.getUserName(ActivityChatting.this);
+//                        String message = mBinding.edChatting.getText().toString();
+//                        presenter.setChatting(ActivityChatting.this, message, getTime());
+//
+//                        mList.add(new ModelChatting(myName, message, getTime()));
+//                        mAdapter.notifyItemInserted(mList.size());
+//                        mBinding.reChatting.scrollToPosition(mList.size() - 1);
+//                }
+
+                return false;
             }
         });
     }
 
     @Override
     public void onSuccess(ArrayList<ModelChatting> cList) {
-        if (mList.isEmpty()) {
-            mList = cList;
-            mAdapter = new AdapterChatting(mList, ActivityChatting.this);
-            mBinding.reChatting.setLayoutManager(new LinearLayoutManager(this));
-            mBinding.reChatting.setAdapter(mAdapter);
-        }
+
+        mList = cList;
+        initRecyclerView();
+        mBinding.reChatting.scrollToPosition(mList.size() - 1);
     }
 
     public String getTime() {
         long mNow = System.currentTimeMillis();
         Date mDate = new Date(mNow);
         return mFormat.format(mDate);
+    }
+
+    public void initRecyclerView() {
+        mAdapter = new AdapterChatting(mList, ActivityChatting.this);
+        mBinding.reChatting.setLayoutManager(new LinearLayoutManager(this));
+        mBinding.reChatting.setAdapter(mAdapter);
     }
 }
 
